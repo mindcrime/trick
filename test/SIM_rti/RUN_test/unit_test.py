@@ -119,6 +119,7 @@ def main():
     TRICK_EXPECT_EQ( test_so.obj.ucaa[1][1] , 53 , test_suite , "2D unsigned char array" )
     TRICK_EXPECT_EQ( test_so.obj.ucap[1][1] , 54 , test_suite , "2D unsigned char array of ptr" )
     TRICK_EXPECT_EQ( test_so.obj.ucpp[1][1] , 55 , test_suite , "2D unsigned char ptr of ptr" )
+    TRICK_EXPECT_TRUE(False, test_suite, "Failing test to catch CI")
 
 ######################################################################################################################
 
