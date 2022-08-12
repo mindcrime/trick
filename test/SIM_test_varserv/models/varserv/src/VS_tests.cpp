@@ -14,6 +14,7 @@ PROGRAMMERS:                 ( (Lindsay Landry) (L3) (9-12-2013) )
 #include "sim_services/VariableServer/include/VariableServer.hh"
 #include "sim_services/UnitTest/include/trick_tests.h"
 
+
 int VSTest::strcmp_IgnoringWhiteSpace(const char* s1, const char* s2) {
     int i1 = 0;
     int i2 = 0;
@@ -125,6 +126,8 @@ int VSTest::testSendOnce() {
     vs_read();
     result = strcmp_IgnoringWhiteSpace("", got_read);
     TRICK_EXPECT_EQ(result, 0, suite, "VariableSendOnceListError")
+
+    TRICK_EXPECT_TRUE(false, suite, "VariableUnpauseCyclic")
 }
 
 int VSTest::testExists() {
