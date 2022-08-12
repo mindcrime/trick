@@ -40,5 +40,7 @@ TEST(MM_creation, Singleton){
 	}
 
 	EXPECT_TRUE((void*)disallowed_memmgr == NULL);
+
+	EXPECT_TRUE(false);
 }
 

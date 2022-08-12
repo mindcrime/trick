@@ -11,7 +11,7 @@ def main():
 	#trick.set_var_server_info_msg_on()
 
 	trick_utest.unit_tests.enable() ;
-	trick_utest.unit_tests.set_exit_code_enabled(True)
+	# trick_utest.unit_tests.set_exit_code_enabled(True)
 	trick_utest.unit_tests.set_file_name( os.getenv("TRICK_HOME") + "/trick_test/SIM_test_varserv.xml" ) 
 	trick_utest.unit_tests.set_test_name( "VariableServerTest" )
 
