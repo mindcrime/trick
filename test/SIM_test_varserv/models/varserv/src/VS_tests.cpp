@@ -126,6 +126,8 @@ int VSTest::testSendOnce() {
     vs_read();
     result = strcmp_IgnoringWhiteSpace("", got_read);
     TRICK_EXPECT_EQ(result, 0, suite, "VariableSendOnceListError")
+
+    TRICK_EXPECT_TRUE(false, suite, "VariableServerFail")
 }
 
 int VSTest::testExists() {

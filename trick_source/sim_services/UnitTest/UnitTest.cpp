@@ -56,7 +56,7 @@ void Trick::TestSuite::delete_test_results() {
 Trick::UnitTest::UnitTest() {
     the_unit_test_output = this ;
     enabled = false ;
-    exit_code_enabled = false ;
+    exit_code_enabled = true ;
     file_name = std::string("test_details.xml") ;
     name = std::string("AllTests") ;
 }
@@ -156,12 +156,11 @@ int Trick::UnitTest::write_output() {
             out << "  </testsuite>" << std::endl  ;
         }
         out << "</testsuites>" << std::endl  ;
+
         out.flush();
         out.close();
 
-        message_publish(MSG_ERROR, "SEARCH ME - updated again");
-
-        if ( num_failures > 0 ) {
+        if ( exit_code_enabled && num_failures > 0 ) {
             exec_terminate_with_return( 1 , __FILE__ , __LINE__ , "Unit Test failure detected." ) ;
         }
     }
