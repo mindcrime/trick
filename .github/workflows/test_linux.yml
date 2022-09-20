@@ -77,7 +77,7 @@ jobs:
               clang-devel
               gcc
               gcc-c++
-              java-11-openjdk-devel
+              java-latest-openjdk-devel
               libxml2-devel
               llvm-devel
               llvm-static
